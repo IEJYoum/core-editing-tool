@@ -1,0 +1,22 @@
+<html>
+    <form method="post">
+        <label for="intid">Core integer ID:</label>
+        <input type="text" name="intid"><br>
+        <label for="gridid">Correct grid ID:</label>
+        <input type="text" name="gridid"><br>
+        <select for="done" name="done">
+            <option value="0">not done</option>
+            <option value="1">done</option>
+        </select>
+        <button type="submit">reassign</button>
+<div class="basic">
+{% include "fig.html" %}    
+</div>
+
+<script>
+if ( window.history.replaceState) {
+window.history.replaceState(null, null, window.location.href);
+}
+</script>
+
+</html>

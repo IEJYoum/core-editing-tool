@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<body>  
+    {% if data %}
+    data!
+    {% for item in showText %}
+        <tr>       
+          <td>{{item}}</td>
+          <br>
+        </tr>       
+    {% endfor %}
+    <br><br>
+    {% for item in op %}
+        <tr>       
+          <td>{{item}}</td>
+          <br>
+        </tr>
+        
+    {% endfor %}
+    Enter a number to pick a direction or enter custom text to talk in the room
+    <form method="post">
+        <label for="name">Choice:</label>
+        <input type="text" name="choice" required><br><br>
+        <select for="menuc" name="menuc">
+            <option value="0">Say</option>
+            <option value="1">SaY</option>
+        </select>
+        
+        <button type="submit">submit</button>
+    </form>
+    {% endif %}
+</body>
+<script>
+if ( window.history.replaceState) {
+window.history.replaceState(null, null, window.location.href);
+}
+</script>
+</html>

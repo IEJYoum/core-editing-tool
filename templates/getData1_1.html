@@ -1,0 +1,34 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <form method="post" >
+        <label for="name">core position data:</label>
+        <input type="file" accept=".csv" name="data" required>
+        <label for="nrw">number of rows:</label>
+        <input type="text" name="nrw" required><br>
+        <label for="ncl">number of columns:</label>
+        <input type="text" name="ncl" required><br>
+        <button type="submit">Go</button>
+    </form>
+</body>
+
+<script>
+function printMousePos(event) {
+  document.body.textContent =
+    "clientX: " + event.clientX +
+    " - clientY: " + event.clientY;
+}
+
+document.addEventListener("click", printMousePos);
+</script>
+
+<script>
+if ( window.history.replaceState) {
+window.history.replaceState(null, null, window.location.href);
+}
+</script>
+</html>
